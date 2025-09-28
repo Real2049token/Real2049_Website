@@ -1,0 +1,383 @@
+/* Custom React-specific styles */
+.App {
+  text-align: left;
+}
+
+/* Override any default React styles that might conflict */
+.App-logo {
+  display: none;
+}
+
+/* Ensure proper styling for React components */
+.react-component {
+  /* Add any component-specific styles here */
+}
+
+/* Ensure content is visible even if animations don't load */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Speed up WOW animations */
+.wow {
+  visibility: visible !important;
+  animation-duration: 0.6s !important;
+}
+
+/* Reduce animation delays for faster loading */
+.wow[data-wow-delay] {
+  animation-delay: 0.1s !important;
+}
+
+/* Advanced scrollytelling effects */
+.scrollytelling-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Magnetic button enhancements */
+.magnetic-button {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.magnetic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 204, 102, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.magnetic-button:hover::before {
+  left: 100%;
+}
+
+/* Text reveal animations */
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  animation: textReveal 0.8s ease-out forwards;
+}
+
+/* Parallax performance optimization */
+.parallax-section {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Counter glow effects */
+.counter-number {
+  position: relative;
+}
+
+.counter-number::after {
+  content: attr(data-count);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--tg-primary-color);
+  filter: blur(4px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Morphing text container */
+.morphing-text-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Advanced hover effects */
+.hover-tilt {
+  transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 204, 102, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 204, 102, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Scroll-triggered gradient */
+.scroll-gradient {
+  background: linear-gradient(45deg, 
+    var(--tg-primary-color), 
+    var(--tg-secondary-color), 
+    var(--tg-primary-color)
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Presale button special effects */
+.presale-button-container {
+  position: relative;
+}
+
+.coming-soon-text {
+  animation: comingSoonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes comingSoonGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 204, 102, 0.5);
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 204, 102, 0.9);
+    opacity: 1;
+  }
+}
+
+/* 3D Scene enhancement */
+.scene-3d-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive alignment fixes */
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.morphing-text-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+/* Counter alignment */
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .counter-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .counter-container > * {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Section alignment */
+.section__title {
+  text-align: center;
+  width: 100%;
+}
+
+.section__title .title {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Feature items alignment */
+.features__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.features__item-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Work section alignment */
+.work__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.work__item-right {
+  text-align: right;
+}
+
+@media (max-width: 991.98px) {
+  .work__item-right {
+    text-align: left;
+  }
+}
+
+/* Team section alignment */
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+}
+
+/* Footer alignment */
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Mobile alignment fixes */
+@media (max-width: 767.98px) {
+  .banner__content {
+    padding: 0 1rem;
+  }
+  
+  
+  .token__wrap-inner {
+    text-align: center;
+  }
+  
+  .exchange__inner-wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .exchange__content {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .exchange__icons .list-wrap {
+    justify-content: center;
+  }
+}
+
+/* Ensure consistent vertical alignment */
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fix any overflow issues */
+.container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Anti-flickering optimizations */
+.banner__area {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.banner__content {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.banner__content .title {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth gradient text */
+.modern-text-gradient {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,83 @@
+/* Modern Color Palette for REAL 2049 */
+:root {
+  /* Primary Colors - Clean & Modern */
+  --real-primary: #6366f1;           /* Modern Indigo */
+  --real-primary-light: #818cf8;     /* Light Indigo */
+  --real-primary-dark: #4f46e5;      /* Dark Indigo */
+  
+  /* Secondary Colors */
+  --real-secondary: #06b6d4;         /* Cyan */
+  --real-secondary-light: #22d3ee;   /* Light Cyan */
+  --real-secondary-dark: #0891b2;    /* Dark Cyan */
+  
+  /* Accent Colors */
+  --real-accent: #f59e0b;            /* Amber */
+  --real-accent-light: #fbbf24;      /* Light Amber */
+  --real-accent-dark: #d97706;       /* Dark Amber */
+  
+  /* Neutral Colors */
+  --real-neutral-50: #f8fafc;       /* Almost White */
+  --real-neutral-100: #f1f5f9;      /* Light Gray */
+  --real-neutral-200: #e2e8f0;      /* Gray */
+  --real-neutral-300: #cbd5e1;      /* Medium Gray */
+  --real-neutral-400: #94a3b8;      /* Dark Gray */
+  --real-neutral-500: #64748b;      /* Darker Gray */
+  --real-neutral-600: #475569;      /* Very Dark Gray */
+  --real-neutral-700: #334155;      /* Almost Black */
+  --real-neutral-800: #1e293b;      /* Dark Background */
+  --real-neutral-900: #0f172a;      /* Darkest */
+  
+  /* Gradient Colors */
+  --real-gradient-1: linear-gradient(135deg, var(--real-primary) 0%, var(--real-secondary) 100%);
+  --real-gradient-2: linear-gradient(135deg, var(--real-secondary) 0%, var(--real-accent) 100%);
+  --real-gradient-3: linear-gradient(135deg, var(--real-accent) 0%, var(--real-primary) 100%);
+  
+  /* Glass Effects */
+  --real-glass-bg: rgba(255, 255, 255, 0.1);
+  --real-glass-border: rgba(255, 255, 255, 0.2);
+  --real-glass-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Update existing variables */
+  --tg-primary-color: var(--real-primary);
+  --tg-secondary-color: var(--real-neutral-800);
+  --tg-heading-font-color: var(--real-neutral-50);
+  --tg-body-font-color: var(--real-neutral-300);
+  --tg-color-dark: var(--real-neutral-900);
+  --tg-border-1: var(--real-neutral-700);
+}
+
+/* Modern Component Styling */
+.modern-card {
+  background: var(--real-glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--real-glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px var(--real-glass-shadow);
+}
+
+.modern-button {
+  background: var(--real-gradient-1);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.modern-text-gradient {
+  background: var(--real-gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modern-glow {
+  filter: drop-shadow(0 0 8px var(--real-primary));
+}
