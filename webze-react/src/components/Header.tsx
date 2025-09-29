@@ -148,15 +148,19 @@ const Header: React.FC = () => {
                       </ul>
                     </div>
                     <div 
-                      className="mobile-nav-toggler" 
+                      className="mobile-nav-toggler d-lg-none" 
                       onClick={toggleMenu}
                       style={{
                         zIndex: 1000,
                         position: 'relative',
-                        display: 'none'
+                        cursor: 'pointer',
+                        padding: '10px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
                       }}
                     >
-                      <i className="tg-flaticon-menu-1"></i>
+                      <i className="tg-flaticon-menu-1" style={{ fontSize: '24px', color: 'white' }}></i>
                     </div>
                   </nav>
                 </div>
@@ -176,12 +180,12 @@ const Header: React.FC = () => {
                 <RealLogo width={170} height={56} />
               </a>
             </div>
-            <div className="tgmobile__search">
+            {/* <div className="tgmobile__search">
               <form action="#">
                 <input type="text" placeholder="Search here..." />
                 <button type="submit"><i className="fas fa-search"></i></button>
               </form>
-            </div>
+            </div> */}
             <div className="tgmobile__menu-outer">
               <div className="navigation">
                 <ul>
@@ -254,10 +258,12 @@ const Header: React.FC = () => {
             </div>
           </nav>
         </div>
-        <div
-          className={`tgmobile__menu-backdrop ${isMenuOpen ? 'mobile-menu-visible' : ''}`}
-          onClick={toggleMenu}
-        ></div>
+        {isMenuOpen && (
+          <div
+            className="tgmobile__menu-backdrop"
+            onClick={toggleMenu}
+          ></div>
+        )}
       </header>
     </>
   );

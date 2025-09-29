@@ -9,15 +9,22 @@ const Banner: React.FC = () => {
     <section
       className="banner__area banner__bg"
       data-background="/assets/img/banner/hero_bg.svg"
-      style={{ backgroundImage: 'url(/assets/img/banner/hero_bg.svg)' }}
+      style={{ 
+        backgroundImage: 'url(/assets/img/banner/hero_bg.svg)',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        paddingTop: '80px',
+        paddingBottom: '80px'
+      }}
     >
       {/* Stunning Hero Background */}
       <StunningHeroBackground />
       
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xl-7 col-lg-8 col-md-10">
-            <div className="banner__content">
+          <div className="col-xl-8 col-lg-10 col-md-11 col-sm-12">
+            <div className="banner__content" style={{ padding: '0 15px' }}>
               <ScrollytellingSection effect="fadeUp" delay={0}>
                 <motion.span
                   className="sub-title"
@@ -29,6 +36,10 @@ const Banner: React.FC = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
+                    display: 'block',
+                    marginBottom: '20px',
+                    fontSize: 'clamp(12px, 2.5vw, 16px)',
+                    lineHeight: '1.4'
                   }}
                 >
                   Hospitality & Venue Access Network
@@ -40,8 +51,12 @@ const Banner: React.FC = () => {
                   className="title" 
                   style={{ 
                     textAlign: 'center', 
-                    margin: '0 auto',
-                    color: 'white'
+                    margin: '0 auto 30px',
+                    color: 'white',
+                    fontSize: 'clamp(28px, 6vw, 64px)',
+                    lineHeight: '1.2',
+                    fontWeight: '700',
+                    letterSpacing: '-0.02em'
                   }}
                 >
                   The{' '}
@@ -64,6 +79,14 @@ const Banner: React.FC = () => {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
+                  style={{
+                    fontSize: 'clamp(16px, 3vw, 20px)',
+                    lineHeight: '1.6',
+                    marginBottom: '40px',
+                    maxWidth: '600px',
+                    margin: '0 auto',
+                    color: 'rgba(255, 255, 255, 0.9)'
+                  }}
                 >
                   Hotels, malls, and attractions commit verifiable inventory. Creators package experiences, bring audiences, and get performance-based payouts.
                 </motion.p>
@@ -79,12 +102,13 @@ const Banner: React.FC = () => {
           className="alltuchtopdown"
           style={{
             position: 'absolute',
-            left: '13%',
-            bottom: '42px',
+            left: 'clamp(2%, 13%, 15%)',
+            bottom: 'clamp(10px, 5vh, 60px)',
             zIndex: -1,
-            width: '280px',
+            width: 'clamp(100px, 20vw, 280px)',
             height: 'auto',
-            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
+            filter: 'drop-shadow(0 5px 15px rgba(0,0,0,0.2))',
+            opacity: 'clamp(0.4, 0.6, 0.8)'
           }}
           animate={{ 
             y: [0, -20, 0],
@@ -102,12 +126,13 @@ const Banner: React.FC = () => {
           className="rotateme"
           style={{
             position: 'absolute',
-            left: '42%',
-            bottom: '-135px',
+            left: 'clamp(30%, 42%, 50%)',
+            bottom: 'clamp(-60px, -10vh, -135px)',
             zIndex: -1,
-            width: '260px',
+            width: 'clamp(100px, 18vw, 260px)',
             height: 'auto',
-            filter: 'drop-shadow(0 15px 40px rgba(0,0,0,0.4))'
+            filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.3))',
+            opacity: 'clamp(0.5, 0.7, 0.9)'
           }}
           animate={{ 
             rotate: 360,
@@ -124,12 +149,13 @@ const Banner: React.FC = () => {
           className="alltuchtopdown"
           style={{
             position: 'absolute',
-            right: '17%',
-            bottom: '45px',
+            right: 'clamp(2%, 17%, 20%)',
+            bottom: 'clamp(10px, 5vh, 60px)',
             zIndex: -1,
-            width: '280px',
+            width: 'clamp(110px, 20vw, 280px)',
             height: 'auto',
-            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
+            filter: 'drop-shadow(0 5px 15px rgba(0,0,0,0.2))',
+            opacity: 'clamp(0.4, 0.6, 0.8)'
           }}
           animate={{ 
             y: [0, -15, 0],
@@ -147,13 +173,16 @@ const Banner: React.FC = () => {
           className="banner__bg-shape"
           style={{
             position: 'absolute',
-            top: '80px',
+            top: 'clamp(20px, 8vh, 80px)',
             left: '50%',
             transform: 'translateX(-50%)',
-            zIndex: -2
+            zIndex: -2,
+            width: 'clamp(200px, 60vw, 800px)',
+            height: 'auto',
+            opacity: 'clamp(0.2, 0.3, 0.4)'
           }}
           animate={{ 
-            opacity: [0.3, 0.6, 0.3],
+            opacity: [0.2, 0.5, 0.2],
             scale: [1, 1.02, 1]
           }}
           transition={{ 

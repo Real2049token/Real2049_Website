@@ -70,7 +70,12 @@ const Features: React.FC = () => {
           {features.slice(0, 2).map((feature) => (
             <div key={feature.id} className="col-lg-6 d-flex">
               <div className="features__item w-100">
-                <div className="features__icon">
+                <div className="features__icon" style={{ 
+                  margin: '0 auto', 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center' 
+                }}>
                   <img src={feature.icon} alt="icon" />
                 </div>
                 <div className="features__content">
