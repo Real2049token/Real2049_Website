@@ -74,14 +74,17 @@ const Banner: React.FC = () => {
       </div>
       <div className="banner__shape">
         <motion.img
-          src="/assets/img/banner/hero_img01.png"
-          alt="shape"
+          src="/assets/img/banner/hero_icon_01.png"
+          alt="Globe Icon"
           className="alltuchtopdown"
           style={{
             position: 'absolute',
             left: '13%',
             bottom: '42px',
-            zIndex: -1
+            zIndex: -1,
+            width: '280px',
+            height: 'auto',
+            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
           }}
           animate={{ 
             y: [0, -20, 0],
@@ -94,14 +97,17 @@ const Banner: React.FC = () => {
           }}
         />
         <motion.img
-          src="/assets/img/banner/hero_img02.png"
-          alt="shape"
+          src="/assets/img/banner/hero_icon_02.png"
+          alt="Wallet Icon"
           className="rotateme"
           style={{
             position: 'absolute',
             left: '42%',
             bottom: '-135px',
-            zIndex: -1
+            zIndex: -1,
+            width: '260px',
+            height: 'auto',
+            filter: 'drop-shadow(0 15px 40px rgba(0,0,0,0.4))'
           }}
           animate={{ 
             rotate: 360,
@@ -113,14 +119,17 @@ const Banner: React.FC = () => {
           }}
         />
         <motion.img
-          src="/assets/img/banner/hero_img03.png"
-          alt="shape"
+          src="/assets/img/banner/hero_icon_03.png"
+          alt="Coin Icon"
           className="alltuchtopdown"
           style={{
             position: 'absolute',
             right: '17%',
             bottom: '45px',
-            zIndex: -1
+            zIndex: -1,
+            width: '280px',
+            height: 'auto',
+            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
           }}
           animate={{ 
             y: [0, -15, 0],

@@ -21,7 +21,10 @@ const RealLogo: React.FC<RealLogoProps> = ({
       style={{
         objectFit: 'contain',
         maxWidth: '100%',
-        height: 'auto'
+        height: 'auto',
+        mixBlendMode: 'screen',
+        filter: 'brightness(1.25) contrast(1.2) saturate(1.15) drop-shadow(0 2px 8px rgba(0,0,0,0.65)) drop-shadow(0 0 12px rgba(99,102,241,0.5))',
+        willChange: 'filter'
       }}
     />
   );
