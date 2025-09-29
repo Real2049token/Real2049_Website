@@ -147,7 +147,15 @@ const Header: React.FC = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className="mobile-nav-toggler" onClick={toggleMenu}>
+                    <div 
+                      className="mobile-nav-toggler" 
+                      onClick={toggleMenu}
+                      style={{
+                        zIndex: 1000,
+                        position: 'relative',
+                        display: 'none'
+                      }}
+                    >
                       <i className="tg-flaticon-menu-1"></i>
                     </div>
                   </nav>
